@@ -380,8 +380,12 @@ body::before {
 }
 
 .menu-panel {
-  display: grid;
   gap: 14px;
+  display: none;
+}
+
+.menu-panel.is-active {
+  display: grid;
 }
 
 .menu-card {

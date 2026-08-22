@@ -93,13 +93,48 @@
           </div>
 
           <div class="menu-switch" role="tablist" aria-label="菜单分类">
-            <button class="menu-tab is-active" data-target="signature" type="button">招牌菜</button>
-            <button class="menu-tab" data-target="small-plates" type="button">小食</button>
-            <button class="menu-tab" data-target="desserts" type="button">甜点</button>
+            <button
+              class="menu-tab is-active"
+              data-target="signature"
+              id="tab-signature"
+              role="tab"
+              aria-controls="signature"
+              aria-selected="true"
+              type="button"
+            >
+              招牌菜
+            </button>
+            <button
+              class="menu-tab"
+              data-target="small-plates"
+              id="tab-small-plates"
+              role="tab"
+              aria-controls="small-plates"
+              aria-selected="false"
+              type="button"
+            >
+              小食
+            </button>
+            <button
+              class="menu-tab"
+              data-target="desserts"
+              id="tab-desserts"
+              role="tab"
+              aria-controls="desserts"
+              aria-selected="false"
+              type="button"
+            >
+              甜点
+            </button>
           </div>
 
           <div class="menu-panels">
-            <div class="menu-panel is-active" id="signature">
+            <div
+              class="menu-panel is-active"
+              id="signature"
+              role="tabpanel"
+              aria-labelledby="tab-signature"
+            >
               <article class="menu-card">
                 <div>
                   <h3>炭烤海鲈鱼</h3>
@@ -123,7 +158,13 @@
               </article>
             </div>
 
-            <div class="menu-panel" id="small-plates" hidden>
+            <div
+              class="menu-panel"
+              id="small-plates"
+              role="tabpanel"
+              aria-labelledby="tab-small-plates"
+              hidden
+            >
               <article class="menu-card">
                 <div>
                   <h3>番茄布拉塔</h3>
@@ -147,7 +188,13 @@
               </article>
             </div>
 
-            <div class="menu-panel" id="desserts" hidden>
+            <div
+              class="menu-panel"
+              id="desserts"
+              role="tabpanel"
+              aria-labelledby="tab-desserts"
+              hidden
+            >
               <article class="menu-card">
                 <div>
                   <h3>焦糖巴斯克</h3>

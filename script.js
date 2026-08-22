@@ -5,7 +5,11 @@ tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const targetId = tab.dataset.target;
 
-    tabs.forEach((item) => item.classList.remove("is-active"));
+    tabs.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-selected", "false");
+    });
+
     panels.forEach((panel) => {
       const isMatch = panel.id === targetId;
       panel.classList.toggle("is-active", isMatch);
@@ -13,6 +17,7 @@ tabs.forEach((tab) => {
     });
 
     tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
   });
 });
 
