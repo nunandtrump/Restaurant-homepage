@@ -348,6 +348,53 @@ body::before {
   max-width: 11ch;
 }
 
+.menu-visuals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.visual-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  background: rgba(255, 248, 239, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.visual-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.visual-copy {
+  padding: 18px 18px 20px;
+}
+
+.visual-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent-deep);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.visual-copy h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.visual-copy p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .menu-switch {
   display: inline-flex;
   gap: 8px;
@@ -479,7 +526,8 @@ body::before {
   .hero-grid,
   .story-section,
   .feature-strip,
-  .story-highlights {
+  .story-highlights,
+  .menu-visuals {
     grid-template-columns: 1fr;
   }
 
